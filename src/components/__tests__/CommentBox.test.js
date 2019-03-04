@@ -23,4 +23,8 @@ it('has a text area that users can type in', () => {
   wrapper.find('textarea').simulate('change', {
     target: { value: 'new comment'}
   })
+  // Force component re-renders so it has new value
+  wrapper.update();
+
+  
 });
